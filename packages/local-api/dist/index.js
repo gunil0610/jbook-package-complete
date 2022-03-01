@@ -11,7 +11,7 @@ var serve = function (port, filename, dir) {
     app.use(http_proxy_middleware_1.createProxyMiddleware({
         target: 'http://localhost:3000',
         ws: true,
-        logLevel: 'silent'
+        logLevel: 'silent',
     }));
     return new Promise(function (resolve, reject) {
         app.listen(port, resolve).on('error', reject);
